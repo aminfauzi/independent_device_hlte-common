@@ -5,6 +5,9 @@ av.offload.enable=true
 persist.bt.enableAptXHD=true
 persist.service.btui.use_aptx=1
 
+# fastbootd
+ro.fastbootd.available=true
+
 # GL
 ro.opengles.version=196608
 
