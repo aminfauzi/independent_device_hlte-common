@@ -81,7 +81,11 @@ include device/samsung/msm8974-common/sepolicy/sepolicy.mk
 # Netd
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 
+# Media
+TARGET_USES_MEDIA_EXTENSIONS := true
+
 # Power
+TARGET_USES_NON_LEGACY_POWERHAL := true
 TARGET_USES_INTERACTION_BOOST := true
 
 # Properties
