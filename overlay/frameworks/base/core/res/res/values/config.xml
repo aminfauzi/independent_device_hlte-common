@@ -322,4 +322,7 @@
     <!-- BurnIn protection. This should be enabled on devices that have OLED displays -->
     <bool name="config_enableBurnInProtection">true</bool>
 
+    <!-- Enable Recents on long press menu button -->
+    <integer name="config_longPressOnMenuKeyBehavior">2</integer>
+
 </resources>
