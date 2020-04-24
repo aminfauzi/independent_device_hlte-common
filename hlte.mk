@@ -47,6 +47,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Keyhandler
+PRODUCT_PACKAGES += \
+    KeyHandler
+
 # Input device
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/sec_e-pen.idc:system/usr/idc/sec_e-pen.idc
