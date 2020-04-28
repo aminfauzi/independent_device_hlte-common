@@ -15,8 +15,7 @@
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    device/samsung/msm8974-common/overlay \
-    device/samsung/msm8974-common/overlay-lineage
+    device/samsung/msm8974-common/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
