@@ -127,6 +127,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.samsung
 
+# IR blaster
+PRODUCT_PACKAGES += \
+    consumerir.msm8974 \
+    consumerir.default \
+    android.hardware.ir@1.0-impl
+
 # Keylayouts
 TARGET_USES_HARDWARE_KEYS := true
 PRODUCT_COPY_FILES += \
