@@ -97,8 +97,8 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl \
-    android.hardware.gnss@1.0-service \
+    android.hardware.gnss@1.0-impl.hlte \
+    android.hardware.gnss@1.0-service.hlte \
     gps.msm8974
 
 PRODUCT_COPY_FILES += \
