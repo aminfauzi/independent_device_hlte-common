@@ -241,6 +241,12 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.samsung8974 \
     android.hardware.sensors@1.0-service.samsung8974
 
+# Superior OS Official
+export SUPERIOR_OFFICIAL := true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.superior.maintainer=AminFauzi
+
 # Shims
 PRODUCT_PACKAGES += \
     libshim_camera \
