@@ -53,3 +53,7 @@ allow init {
 allow init efs_file:dir mounton;
 allow init init:capability2 block_suspend;
 allow init vendor_file:file execute_no_trans;
+allow init hal_usb_hwservice:hwservice_manager add;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init hwservicemanager:binder { call transfer };
+allow init system_server:binder call;
