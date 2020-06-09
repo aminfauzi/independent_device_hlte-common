@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,8 +15,12 @@
 # limitations under the License.
 #
 
+# Include Legacy Sepolicy from PA
 include device/qcom/sepolicy/legacy-pre-um/legacy-pre-um.mk
 
 # Board specific SELinux policy variable definitions
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/msm8974-common/sepolicy/common
+PLAT_PRIVATE_POLICY += \
+    device/samsung/msm8974-common/sepolicy/private
+
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    device/samsung/msm8974-common/sepolicy/vendor
