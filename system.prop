@@ -27,3 +27,8 @@ persist.rild.nitz_short_ons_3=""
 
 # Time
 persist.timed.enable=true
+
+# Misc
+debug.mdpcomp.logs=0
+persist.hwc.mdpcomp.enable=true
+ro.telephony.call_ring.multiple=0

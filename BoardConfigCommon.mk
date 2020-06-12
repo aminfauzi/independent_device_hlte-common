@@ -1,5 +1,6 @@
 # Copyright (C) 2012 The CyanogenMod Project
 # Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,13 +17,23 @@
 # inherit from qcom-common
 include device/samsung/qcom-common/BoardConfigCommon.mk
 
+
+# Bootloader
+TARGET_NO_BOOTLOADER := true
+
 # Platform
+BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := msm8974
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
+BOARD_USES_QCOM_HARDWARE := true
 
 # Architecture
+TARGET_ARCH := arm
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := krait
+TARGET_ARCH_VARIANT := armv7-a-neon
 
 # Audio
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
@@ -71,6 +82,10 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 # Filesystem
 TARGET_FS_CONFIG_GEN := device/samsung/msm8974-common/config.fs
 
+# Graphics
+TARGET_USES_C2D_COMPOSITION := true
+TARGET_USES_ION := true
+
 # HIDL
 DEVICE_MANIFEST_FILE := device/samsung/msm8974-common/manifest.xml
 DEVICE_MATRIX_FILE := device/samsung/msm8974-common/compatibility_matrix.xml
@@ -93,6 +108,8 @@ TARGET_SYSTEM_PROP += device/samsung/msm8974-common/system.prop
 
 # Recovery
 TARGET_RECOVERY_DEVICE_DIRS += device/samsung/msm8974-common
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+BOARD_HAS_DOWNLOAD_MODE := true
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
