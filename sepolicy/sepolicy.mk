@@ -21,5 +21,5 @@ include device/qcom/sepolicy/legacy-pre-um/legacy-pre-um.mk
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/samsung/hlte-common/sepolicy/vendor
 
-PLAT_PRIVATE_POLICY += \
+BOARD_PLAT_PRIVATE_POLICY += \
     device/samsung/hlte-common/sepolicy/private
