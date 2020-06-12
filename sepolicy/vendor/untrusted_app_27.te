@@ -1,0 +1,9 @@
+allow untrusted_app_27 proc_net:file read;
+allow untrusted_app_27 proc_tty_drivers:file read;
+allow untrusted_app_27 block_device:dir search;
+allow untrusted_app_27 dalvikcache_data_file:file execmod;
+allow untrusted_app_27 hal_memtrack_default:binder call;
+allow untrusted_app_27 hal_memtrack_hwservice:hwservice_manager find;
+allow untrusted_app_27 persist_file:dir getattr;
+allow untrusted_app_27 proc:file { read open };
+allow untrusted_app_27 rootfs:dir read;

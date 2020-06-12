@@ -7,5 +7,4 @@
 Samsung Galaxy Note 3 Common Device Tree 
 ----------------------------------------
 
-
 Modified by  **[Jprimero15](http://github.com/jprimero15/ "Jprimero15")** for CAF base ROMs

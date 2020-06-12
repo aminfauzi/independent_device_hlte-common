@@ -1,0 +1,16 @@
+allow charger device:dir { r_dir_perms };
+allow charger sysfs:file { r_file_perms };
+
+r_dir_file(charger, sysfs_battery_supply)
+r_dir_file(charger, sysfs_batteryinfo)
+r_dir_file(charger, sysfs_usb_supply)
+r_dir_file(charger, sysfs_graphics)
+r_dir_file(charger, sysfs_thermal)
+
+allow charger {
+    sysfs_battery_supply
+    sysfs_batteryinfo
+    sysfs_usb_supply
+    sysfs_graphics
+    sysfs_thermal
+}:file rw_file_perms;

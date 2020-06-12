@@ -14,7 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Include Legacy Sepolicy from PA
+include device/qcom/sepolicy/legacy-pre-um/legacy-pre-um.mk
 
 # Board specific SELinux policy variable definitions
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/samsung/hlte-common/sepolicy/vendor
+
+PLAT_PRIVATE_POLICY += \
+    device/samsung/hlte-common/sepolicy/private

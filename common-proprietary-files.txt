@@ -31,6 +31,10 @@ vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
+# aptX bluetooth 
+vendor/lib/libaptX_encoder.so|984739a0bc968e18f75ced205733fe3f51c2d4f0
+vendor/lib/libaptXHD_encoder.so|974c486e4ca03faa0713553d9dfe2995ac93e01c
+
 # Bluetooth firmware
 vendor/firmware/bcm4335_V0111.0559.hcd
 
@@ -71,7 +75,9 @@ vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera2_vpe_module.so
 vendor/lib/libmmcamera2_wnr_module.so
+vendor/lib/libmmjpeg.so|2b0bf12bbb7b63c84db77f922d18a4a335634930
 vendor/lib/liboemcamera.so
+
 
 # Camera chromatix
 etc/C13QL_s5k3l2xx_module_info.xml:vendor/etc/C13QL_s5k3l2xx_module_info.xml
@@ -250,6 +256,39 @@ vendor/lib/librpmb.so
 vendor/lib/libssd.so
 vendor/lib/libQSEEComAPI.so
 
+# GPS (from FP2 N Fairphone/FP2/FP2:7.1.2/19.08.1/gms-fad0fe00)
+vendor/bin/irsc_util|aba0bc2531cf5cf55169b00e40a3132e8c64fbd8
+vendor/bin/loc_launcher|88b17157ab3d088aa0c4a3cb8163978d6a2168e4
+vendor/etc/sec_config|d082ab0eb5e67fbc2bacf7db6172b5ad624eb56a
+vendor/lib/hw/flp.default.so|eed0842003764b602c072ddfab0ef38fbdff8c62
+vendor/lib/libflp.so|532f12b0e3e1f71eb4dd85239b357bf2a0c8cca6
+vendor/lib/libgeofence.so|4929156f274c16b4e834db4f2c050c1f67607848
+vendor/lib/libizat_core.so|8da21c500def47067e8d6351034ffbca39c3c928
+vendor/lib/liblbs_core.so|a06d4fb42ed38851f9eaf005090f80f665434b3f
+vendor/lib/libloc_api_v02.so|36b872293fc76f15e005ec55b0724c9583629e2a
+vendor/lib/libloc_ds_api.so|da39a3ee5e6b4b0d3255bfef95601890afd80709
+
+# Graphics (OnePlus onyx - Oxygen OS 3.1.4 - OnePlusXOxygen_14_201611071506)
+vendor/lib/egl/eglsubAndroid.so|b8a5790c5b4ba4cf0018c94066104610c821ed8e
+vendor/lib/egl/libEGL_adreno.so|cd29673e990dba8158e961e287a79dfbd852d095
+vendor/lib/egl/libGLESv1_CM_adreno.so|ae86d16ba499ac6cdd3cecb91ae6b16b4c303984
+vendor/lib/egl/libGLESv2_adreno.so|445be60045ff86d1d27545692134eacf0d89a6dc
+vendor/lib/egl/libq3dtools_adreno.so|2c12919492f1146b58f4f1c379dfe10d3320d476
+vendor/lib/libC2D2.so|d34587d5143bd09f847cb6686b03461a6e62cd87
+vendor/lib/libCB.so|3d2ad5bbff1cf4019d89c38689ec2ce3c186a3c1
+vendor/lib/libOpenCL.so|2b4b9692b16729b880d7881e68208183943f9612
+vendor/lib/libadreno_utils.so|a109e06c933811c578d129c0772a612cf5d94367
+vendor/lib/libbccQTI.so|94132d5d8421428001c2201a8915949c531b0ad9
+vendor/lib/libc2d30-a3xx.so|3666e0bf418e7ea7480b27c2c1ddd1bc86037044
+vendor/lib/libgsl.so|fafee1adf0e89325b3a1ea83d5205c02ebf860f3
+vendor/lib/libllvm-qcom.so|fc96c949b662fb34b287a4c0aa194984fbb57d7d
+vendor/lib/libsc-a3xx.so|231201bcfead5f930537d2fba22d89b00e673386
+vendor/lib/libscale.so|b44f44c633fa404d10e76aaa23593b516e08e2b8
+
+# Graphics firmware (same everywhere, so lets say Samsung G900FXXS1CQI4_G900FPHN1CQI2_PHN)
+vendor/firmware/a330_pfp.fw|3e2fcee7276ded819cf2d95864fdd6788a484ee1
+vendor/firmware/a330_pm4.fw|ae739ea812f9e4462d7bba8b9ead5782d4496618
+
 # IPC router security
 bin/irsc_util:vendor/bin/irsc_util
 etc/sec_config:vendor/etc/sec_config
@@ -304,10 +343,18 @@ bin/rfs_access:vendor/bin/rfs_access
 bin/rmt_storage:vendor/bin/rmt_storage
 vendor/lib/libril-qcril-hook-oem.so
 
+# Renderscript (OnePlus onyx - Oxygen OS 3.1.4 - OnePlusXOxygen_14_201611071506)
+vendor/lib/libRSDriver_adreno.so|371dc9e34dfb3b4f3352d285d7dbfdd2d30daf23
+vendor/lib/librs_adreno.so|483b327e1a7fde0a898019d5958e43097fd87f98
+vendor/lib/librs_adreno_sha1.so|e254ee7df74b1f0ecd73fc6b02e5bd5367a83de6
+
 # Sensors
 lib/hw/sensorhubs.msm8974.so:vendor/lib/hw/sensorhubs.msm8974.so
 lib/hw/sensors.msm8974.so:vendor/lib/hw/sensors.vendor.msm8974.so
 lib/libsensirion_h_2.so:vendor/lib/libsensirion_h_2.so
+
+# STLport (Camera/RIL) - local compile LineageOS/external/stlport@984b8432
+vendor/lib/libstlport.so|0be0a0d13e12fbf95d97d309dcbc25d3f969a469
 
 # Time services (Samsung klte - G900FXXU1CQE1_G900FPHE1CQE1_PHE)
 -app/TimeService/TimeService.apk|dd8d01ac83aed2908d1cd4799dba90af175b17a7
@@ -331,3 +378,6 @@ etc/wifi/nvram_net.txt_murata:vendor/etc/wifi/nvram_net.txt_murata|7b514f462fb55
 etc/wifi/nvram_net.txt_muratafem1:vendor/etc/wifi/nvram_net.txt_muratafem1|40dfcd74b14def9a292455ad00c6280fae6975eb
 etc/wifi/nvram_net.txt_semco3rd:vendor/etc/wifi/nvram_net.txt_semco3rd
 etc/wifi/nvram_net.txt_wisol:vendor/etc/wifi/nvram_net.txt_wisol
+
+# Widevine (Google angler - OPR6.170623.017)
+vendor/lib/mediadrm/libwvdrmengine.so|66ba66d047044f92eb0eada1faf6a5799ded90a
