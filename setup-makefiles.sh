@@ -2,7 +2,6 @@
 #
 # Copyright (C) 2014 The CyanogenMod Project
 # Copyright (C) 2017-2018 The LineageOS Project
-# Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,9 +24,9 @@ export INITIAL_COPYRIGHT_YEAR=2014
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-PA_ROOT="$MY_DIR"/../../..
+CM_ROOT="$MY_DIR"/../../..
 
-HELPER="$PA_ROOT"/vendor/pa/build/tools/extract_utils.sh
+HELPER="$CM_ROOT"/vendor/lineage/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -35,7 +34,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$PA_ROOT" true
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
 
 # Copyright headers and common guards
 write_headers "h3gduoschn hlte hltechn hltekor hltetmo"
@@ -56,7 +55,7 @@ if [ ! -z $VARIANT_COPYRIGHT_YEAR ]; then
 fi
 
 # Reinitialize the helper for device
-setup_vendor "$DEVICE" "$VENDOR" "$PA_ROOT"
+setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
 # Copyright headers and guards
 write_headers
@@ -66,3 +65,5 @@ for BLOB_LIST in "$MY_DIR"/../$DEVICE/device-proprietary-files*.txt; do
 done
 
 write_footers
+
+./../msm8974-common/setup-makefiles.sh $@

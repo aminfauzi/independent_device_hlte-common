@@ -1,6 +1,5 @@
 #
 # Copyright (C) 2018 The LineageOS Project
-# Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,8 +17,9 @@
 include device/qcom/sepolicy/legacy-pre-um/legacy-pre-um.mk
 
 # Board specific SELinux policy variable definitions
-BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/samsung/hlte-common/sepolicy/vendor
 
 BOARD_PLAT_PRIVATE_POLICY += \
     device/samsung/hlte-common/sepolicy/private
+
+BOARD_SEPOLICY_DIRS += \
+    device/samsung/hlte-common/sepolicy/common

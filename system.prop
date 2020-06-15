@@ -59,9 +59,6 @@ ro.gps.agps_provider=1
 ro.qc.sdk.izat.premium_enabled=0
 ro.qc.sdk.izat.service_mask=0x0
 
-# ParanoidDoze
-ro.sensor.proximity=true
-
 # perf api
 ro.rom.builder=Jprimero15
 ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
@@ -109,3 +106,9 @@ persist.sys.wfd.virtual=0
 
 # Wifi
 wifi.interface=wlan0
+
+# X Hax
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
