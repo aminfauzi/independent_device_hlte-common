@@ -20,3 +20,6 @@ BOARD_PLAT_PRIVATE_POLICY += \
 
 BOARD_SEPOLICY_DIRS += \
     device/samsung/hlte-common/sepolicy/common
+
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    device/samsung/msm8974-common/sepolicy/vendor
